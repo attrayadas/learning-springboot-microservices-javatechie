@@ -9,7 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Demo project of how Spring uses multiple conditional statements in auto-configuration
  * Path to check autoconfigured classes: org\springframework\boot\spring-boot-autoconfigure\3.3.1\spring-boot-autoconfigure-3.3.1.jar!\META-INF\spring\org.springframework.boot.autoconfigure.AutoConfiguration.imports
- *
  */
 
 /**
