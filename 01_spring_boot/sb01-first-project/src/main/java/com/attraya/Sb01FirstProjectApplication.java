@@ -27,13 +27,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-public class Springboot01FirstProjectApplication implements CommandLineRunner {
+public class Sb01FirstProjectApplication implements CommandLineRunner {
 
 	@Autowired
 	private DataSourceConfig dataSourceConfig;
 
 	public static void main(String[] args) {
-		SpringApplication.run(Springboot01FirstProjectApplication.class, args);
+		SpringApplication.run(Sb01FirstProjectApplication.class, args);
 	}
 
 	@Override

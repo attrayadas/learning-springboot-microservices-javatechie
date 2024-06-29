@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.attraya</groupId>
-	<artifactId>springboot01-first-project</artifactId>
+	<artifactId>sb01-first-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springboot01-first-project</name>
 	<description>Demo project of how Spring uses multiple conditional statements in auto-configuration</description>
