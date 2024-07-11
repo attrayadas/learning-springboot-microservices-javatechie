@@ -1,0 +1,17 @@
+#Google Account -> Security -> 2-Step Verification -> Input password as asked -> Turn ON (you could use SMS to get Gmail code to activate 2-Step Verification)
+#Google Account -> Security -> App password -> Input password as asked -> Select the app and device... -> e.g. Other(Custom name) -> Input app name e.g. MyApp -> Generate
+#Copy a 16-character password
+#Use a 16-character password with Gmail username in your application
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: attrayaghoshdas@gmail.com
+    password: <insert 16 character password here>
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
