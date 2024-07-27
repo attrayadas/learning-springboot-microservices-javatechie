@@ -1,5 +1,7 @@
 package com.attraya.service;
 
+import com.attraya.bo.ProjectEngineer;
+import com.attraya.bo.ProjectEngineerResponseBO;
 import com.attraya.entity.Engineer;
 import com.attraya.entity.Project;
 import com.attraya.repository.EngineerRepository;
@@ -31,5 +33,25 @@ public class ProjectManagementService {
     public String deleteProject(int projectId){
         projectRepository.deleteById(projectId);
         return "project: "+projectId+" deleted!";
+    }
+
+    public String[] getProjectSpecificInfoSQL(){
+        return projectRepository.getProjectSpecificInfoWithSQL();
+    }
+
+    public String[] getProjectSpecificInfoJPQL(){
+        return projectRepository.getProjectSpecificInfoWithJPQL();
+    }
+
+    public List<ProjectEngineerResponseBO> getProjectSpecificInfoWithObjectBinding(){
+        return projectRepository.getProjectSpecificInfoWithObjectBinding();
+    }
+
+    public List<ProjectEngineerResponseBO> getProjectSpecificInfoWithObjectBindingV2(){
+        return projectRepository.getProjectSpecificInfoWithObjectBindingV2();
+    }
+
+    public List<ProjectEngineer> getProjectSpecificInfoWithObjectBindingV3(){
+        return projectRepository.getProjectSpecificInfoWithObjectBindingV3();
     }
 }

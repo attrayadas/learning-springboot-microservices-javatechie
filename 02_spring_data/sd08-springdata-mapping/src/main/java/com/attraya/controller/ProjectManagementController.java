@@ -1,5 +1,7 @@
 package com.attraya.controller;
 
+import com.attraya.bo.ProjectEngineer;
+import com.attraya.bo.ProjectEngineerResponseBO;
 import com.attraya.entity.Engineer;
 import com.attraya.entity.Project;
 import com.attraya.service.ProjectManagementService;
@@ -32,5 +34,30 @@ public class ProjectManagementController {
     @DeleteMapping("/project/{projectId}")
     public String deleteProject(@PathVariable int projectId){
         return projectManagementService.deleteProject(projectId);
+    }
+
+    @GetMapping("/join/sql")
+    public String[] getProjectSpecificInfoSQL(){
+        return projectManagementService.getProjectSpecificInfoSQL();
+    }
+
+    @GetMapping("/join/jpql")
+    public String[] getProjectSpecificInfoJPQL(){
+        return projectManagementService.getProjectSpecificInfoJPQL();
+    }
+
+    @GetMapping("/join/object")
+    public List<ProjectEngineerResponseBO> getProjectSpecificInfoWithObjectBinding(){
+        return projectManagementService.getProjectSpecificInfoWithObjectBinding();
+    }
+
+    @GetMapping("/join/object/v2")
+    public List<ProjectEngineerResponseBO> getProjectSpecificInfoWithObjectBindingV2(){
+        return projectManagementService.getProjectSpecificInfoWithObjectBindingV2();
+    }
+
+    @GetMapping("/join/object/v3")
+    public List<ProjectEngineer> getProjectSpecificInfoWithObjectBindingV3(){
+        return projectManagementService.getProjectSpecificInfoWithObjectBindingV3();
     }
 }
